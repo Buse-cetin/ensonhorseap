@@ -1,0 +1,63 @@
+
+{% extends 'movies/base.html' %} {% load static %} {% block css_files %}
+
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'vendor/slick/slick.min.css' %}"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'vendor/slick/slick-theme.min.css' %}"
+/>
+
+
+
+
+<div id="wrapper"> 
+  {% include 'partials/_sidebar.html' %}
+  <div id="content-wrapper" class="d-flex flex-column">
+    <div id="content">
+      {% include 'partials/_topbar.html' %}
+
+      <div class="container-fluid">
+        <div class="osahan-slider">
+          <div class="osahan-slider-item">
+            <img
+              src="{% static 'img/k1.png' %}"
+              class="img-fluid rounded"
+              alt="..."
+            />
+          </div>
+          <div class="osahan-slider-item">
+            <img
+              src="{% static 'img/k2.png' %}"
+              class="img-fluid rounded"
+              alt="..."
+            />
+          </div>
+          <div class="osahan-slider-item">
+            <img
+              src="{% static 'img/k3.png' %}"
+              class="img-fluid rounded"
+              alt="..."
+            />
+          </div>
+        </div>
+        
+
+        
+        {% include 'partials/_footer.html' %}
+
+  </div>
+</div>
+
+<a class="scroll-to-top rounded" href="#page-top">
+  <i class="fas fa-angle-up"></i>
+</a>
+
+<a class="scroll-to-top rounded" href="#page-top">
+  <i class="fas fa-angle-up"></i>
+  </a>
+{% endblock %}
